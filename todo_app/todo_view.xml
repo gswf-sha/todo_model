@@ -23,11 +23,11 @@
 					<sheet>
 						<group name="group_top">
 							<group name="group_left">
-								<filed name="name"/>
+								<field name="name"/>
 							</group>
 							<group name="group_right">
-								<filed name="is_done"/>
-								<filed name="active" readonly="1"/>
+								<field name="is_done"/>
+								<field name="active" readonly="1"/>
 							</group>
 						</group>
 					</sheet>
