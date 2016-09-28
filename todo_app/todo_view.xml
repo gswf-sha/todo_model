@@ -11,6 +11,7 @@
 					<filed name="active" readonly="1"/>
 				</form>
 			</filed>
+		</record>
 		<!--Action to open Todo Task list-->
 		<act_window id="action_todo_task"
 			name="To-do Task"
