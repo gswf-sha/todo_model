@@ -4,13 +4,13 @@
 		<record id = "view_form_todo_task" model="ir.ui.view">
 			<field name="name">To-do Task Form</field>
 			<field name="model">todo.task</field>
-			<filed name="arch" type="xml">
+			<field name="arch" type="xml">
 				<form string="To-do Task">
 					<filed name="name"/>
 					<filed name="is_done"/>
 					<filed name="active" readonly="1"/>
 				</form>
-			</filed>
+			</field>
 		</record>
 		<!--Action to open Todo Task list-->
 		<act_window id="action_todo_task"
