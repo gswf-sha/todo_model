@@ -5,7 +5,7 @@
 		<act_window id="action_todo_task"
 			name="To-do Task"
 			res_model = "todo.task"
-			view_mode = "tree, form"
+			view_mode = "tree,form"
 			/>
 		<!-- Menu Item to open Todo Task list -->
 		<menuitem id ="menu_todo_task"
