@@ -5,11 +5,35 @@
 			<field name="name">To-do Task Form</field>
 			<field name="model">todo.task</field>
 			<field name="arch" type="xml">
+
 				<form string="To-do Task">
-					<filed name="name"/>
-					<filed name="is_done"/>
-					<filed name="active" readonly="1"/>
+					<header>
+						<button 
+							name="do_toggle_done"
+							type="object"
+							string="Toggle Done"
+							class="oe_highlight"
+							/>
+						<button 
+							name="do_clear_done"
+							type="object"
+							string="Clear All Done"
+							/>
+					</header>
+					<sheet>
+						<group name="group_top">
+							<group name="group_left">
+								<filed name="name"/>
+							</group>
+							<group name="group_right">
+								<filed name="is_done"/>
+								<filed name="active" readonly="1"/>
+							</group>
+						</group>
+					</sheet>
+					
 				</form>
+
 			</field>
 		</record>
 		<!--Action to open Todo Task list-->
