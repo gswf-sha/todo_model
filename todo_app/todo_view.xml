@@ -1,11 +1,10 @@
 <?xml version= "1.0"?>
 <openerp>
 	<data>
-		<record id = "view_form_todo_task" model="ir.ui.view">
+		<record id= "view_form_todo_task" model="ir.ui.view">
 			<field name="name">To-do Task Form</field>
 			<field name="model">todo.task</field>
 			<field name="arch" type="xml">
-
 				<form string="To-do Task">
 					<header>
 						<button 
@@ -34,6 +33,17 @@
 					
 				</form>
 
+			</field>
+		</record>
+
+		<record id="view_tree_todo_task" model="ir.ui.view">
+			<field name="name">Tod-do Task Tree</field>
+			<field name="model">todo.task</field>
+			<field name="arch" type="xml">
+				<tree colors="gray:is_done==True">
+					<field name="name"/>
+					<field name="is_done"/>
+				</tree>
 			</field>
 		</record>
 		<!--Action to open Todo Task list-->
