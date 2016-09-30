@@ -16,7 +16,7 @@ class TodoTask(models.Model):
 		done_recs.write({'active':False})
 		return True
 
-	@api.ooe
+	@api.one
 	def do_toggle_done(self):
 		if self.user_id != self.env.user:
 			raise Exception('Only the responsble can do this!')
