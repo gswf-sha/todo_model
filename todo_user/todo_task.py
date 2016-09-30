@@ -9,7 +9,7 @@ class TodoTask(models.Model):
 
 	@api.multi
 	def do_clear_done(self):
-		domain = [('is_done',)'=',True),
+		domain = [('is_done'),'=',True),
 			'|',('user_id','=',self.env.uid),
 			('user_id',	'=',False)]
 		done_recs= self.search(domain)
