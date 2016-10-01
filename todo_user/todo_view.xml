@@ -5,47 +5,13 @@
 		<record id= "view_form_todo_task_inherited" model="ir.ui.view">
 			<field name="name">To-do Task Form - User extension</field>
 			<field name="model">todo.task</field>
+			<field name="inherit_id" ref="todo_app.view_form_todo_task"/>
 			<field name="arch" type="xml">
 				<field name="is_done" position="before">
 					<field name="date_deadline" />
 				</field>
 			</field>
 		</record>
-		<!-- add list view -->
-		<record id="view_tree_todo_task" model="ir.ui.view">
-			<field name="name">Tod-do Task Tree</field>
-			<field name="model">todo.task</field>
-			<field name="arch" type="xml">
-				<tree colors="gray:is_done==True">
-					<field name="name"/>
-					<field name="is_done"/>
-				</tree>
-			</field>
-		</record>
-		<!-- add Search view -->
-		<record id="view_filter_todo_task" model="ir.ui.view">
-			<field name="name">Tod-do Task Filter</field>
-			<field name="model">todo.task</field>
-			<field name="arch" type="xml">
-				<search>
-					<field name="name"/>
-					<filter string="Not Done" domain="[('is_done','=',False)]"/>
-					<filter string="Done" domain="[('is_done','!=',False)]"/>
-				</search>
-			</field>
-		</record>
-		<!--Action to open Todo Task list-->
-		<act_window id="action_todo_task"
-			name="To-do Task"
-			res_model = "todo.task"
-			view_mode = "tree,form"
-			/>
-		<!-- Menu Item to open Todo Task list -->
-		<menuitem id ="menu_todo_task"
-			name="To-do Task"
-			parent= "mail.mail_feeds"
-			sequence = "20"
-			action = "action_todo_task"
-			/>
+		
 	</data>
 </openerp>
