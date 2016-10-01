@@ -18,6 +18,17 @@
 				</field>
 			</field>
 		</record>
+		<!-- add tree view -->
+		<record id="view_tree_todo_task_inherited" model="ir.ui.view">
+			<field name="name">Todo Task tree - User extension</field>
+			<field name="model">todo.task</field>
+			<field name="inherit_id" ref="todo_app.view_tree_todo_task"/>
+			<field name="arch" type="xml">
+				<field name="name" position="after">
+					<field name="user_id" />
+				</field>
+			</field>
+		</record>
 		
 	</data>
 </openerp>
