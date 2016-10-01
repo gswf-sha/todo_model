@@ -6,8 +6,8 @@
 			<field name="name">To-do Task Form - User extension</field>
 			<field name="model">todo.task</field>
 			<field name="arch" type="xml">
-				<field name="name" position="after">
-					<field name="user_id" />
+				<field name="is_done" position="before">
+					<field name="date_deadline" />
 				</field>
 			</field>
 		</record>
