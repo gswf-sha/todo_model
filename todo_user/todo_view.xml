@@ -2,10 +2,10 @@
 <openerp>
 	<data>
 		<!-- add form view -->
-		<record id= "view_form_todo_task_inherited" model="ir.ui.view">
+		<record id="view_form_todo_task_inherited" model="ir.ui.view">
 			<field name="name">To-do Task Form - User extension</field>
 			<field name="model">todo.task</field>
-			<!-- <field name="arch" type="xml">
+			<field name="arch" type="xml">
 				<field name="name" position="after">
 					<field name="user_id" />
 				</field>
@@ -15,7 +15,7 @@
 				<field name="name" position="attributes">
 					<attribute name="string">I have to ...</attribute>
 				</field>
-			</field> -->
+			</field>
 		</record>
 		
 	</data>
