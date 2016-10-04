@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<!-- data to load -->
+		<record model="todo.task" id=="todo_task_c">
+			<field name="name">Reinstall Odoo</field>
+			<field name="user_id" ref="base.user_root" />
+			<field name="date_deadline">2016-12-31</field>
+		</record>
+	</data>
+</openerp>
