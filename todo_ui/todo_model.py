@@ -20,7 +20,7 @@ class Stage(models.Model):
 	# _table = 'todo_task_stage'
 
 	# String fields:
-	name = fields.Char('Name',40,translate=True)
+	name = fields.Char('Name', 40)
 	desc = fields.Text('Description')
 	state = fields.Selection(
 		[('draft','New'),('open','Started'),('done','Closed')],
