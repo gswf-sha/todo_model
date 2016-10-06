@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
 		<act_window id="action_todo_stage"
@@ -19,14 +19,14 @@
 			src_model="todo.task"
 			multi="False" />
 		<menuitem id="menu_todo_task_main"
-			name="To-Do" parent="mail.mail_my_stuff" />
+			name="ToDo-LSY" parent="mail.mail_my_stuff" />
 		<menuitem id="todo_app.menu_todo_task"
-			name="To-Do Tasks"
+			name="To-Do Task"
 			parent="menu_todo_task_main"
 			sequence="10"
 			action="todo_app.action_todo_task" />
 		<menuitem id="menu_todo_task_stage"
-			name="To-Do Stages"
+			name="To-Do Stage"
 			parent="menu_todo_task_main"
 			sequence="20"
 			action="action_todo_stage" />
