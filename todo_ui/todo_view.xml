@@ -30,5 +30,31 @@
 			parent="menu_todo_task_main"
 			sequence="20"
 			action="action_todo_stage" />
+		<record id="view_form_todo_task_ui" model="ir.ui.view">
+			<field name="name">view_form_todo_task_ui</field>
+			<field name="model">todo.task</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<field name="stage_state" invisible="True" />
+						<button name="do_toggle_done" type="object" attrs="{'invisible':
+							[('stage_state','in',['done','cancel'])]
+							}"
+							string="Toggle Done" class="oe_highlight" />
+						<!-- Buttons and status widget -->
+					</header>
+					<sheet>
+						<!-- Form content -->
+					</sheet>
+					<!-- History and communication: -->
+					<div class="oe_chatter">
+						<field name="message_follower_ids"
+							widget="mail_followers" />
+						<field name="message_ids"
+							widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
 	</data>
 </openerp>
