@@ -16,12 +16,12 @@ class Tag(models.Model):
 
 class Stage(models.Model):
 	_name = 'todo.task.stage'
-	_order = 'sequence.name'
+	_order = 'sequence,name'
 	# _rec_name= 'name' #the default
 	# _table = 'todo_task_stage'
 
 	# String fields:
-	name = fields.Char('Name')
+	name = fields.Char('Name',size=40,translate=True)
 	desc = fields.Text('Description')
 	state = fields.Selection(
 		[('draft','New'),('open','Started'),('done','Closed')],
