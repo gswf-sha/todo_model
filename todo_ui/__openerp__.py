@@ -4,4 +4,5 @@
 	'author': 'Feng Ye',
 	'depends':['todo_app',
 		'todo_user'],
+	'data':['todo_view.xml']
 }
