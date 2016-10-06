@@ -41,7 +41,9 @@
 							[('stage_state','in',['done','cancel'])]
 							}"
 							string="Toggle Done" class="oe_highlight" />
-						<!-- Buttons and status widget -->
+						<!-- Add stage statusbar: -->
+						<field name="stage_id" widget="statusbar"
+							clickable="True" options="{'fold_field':'fold'}" />
 					</header>
 					<sheet>
 						<!-- Form content -->
