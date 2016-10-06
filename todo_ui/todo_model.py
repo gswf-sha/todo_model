@@ -47,7 +47,7 @@ class TodoTask(models.Model):
 	_inherit = 'todo.task'
 	_sql_constraints = [
 		('todo_task_name_uniq',
-			'UNIQUE (name, nuser_id,active)',
+			'UNIQUE (name, user_id,active)',
 			'Task title must be unique!')]
 
 	stage_id =fields.Many2one('todo.task.stage','Stage')
