@@ -82,7 +82,7 @@ class TodoTask(models.Model):
 
 	@api.one
 	def compute_user_todo_count(self):
-		self.user_todo_count = slef.search.count(
+		self.user_todo_count = self.search.count(
 			[('user_id','=',self.user_id.id)])
 
 	user_todo_count = fields.Integer(
