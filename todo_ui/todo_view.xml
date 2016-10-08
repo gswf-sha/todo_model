@@ -39,7 +39,7 @@
 			name="To-Do Stage Test"
 			parent="menu_todo_task_main"
 			sequence="30"
-			action="action_todo_stage_test" />
+			action="action_todo_stage" />
 		<record id="view_form_todo_task_ui" model="ir.ui.view">
 			<field name="name">view_form_todo_task_ui</field>
 			<field name="model">todo.task</field>
