@@ -1,6 +1,11 @@
 # -*- coding:utf-8 -*-
 from openerp import models, fields, api
 from openerp.exceptions import ValidationError
+from openerp.addons.base.res import res_request
+
+def referencable_models(self):
+	return res_request.referencable_models(
+		self,self.env.cr, self.env.uid,context=self.env.context)
 
 class Tag(models.Model):
 	_name = 'todo.task.tag'
@@ -62,6 +67,9 @@ class TodoTask(models.Model):
 	stage_state = fields.Selection(
 		related = 'stage_id.state',
 		string = 'Stage State')
+
+	refers_to = fields.Reference(
+		referencable_models, 'Refers to')
 
 	@api.one
 	@api.depends('stage_id.fold')
