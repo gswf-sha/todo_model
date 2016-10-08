@@ -5,6 +5,10 @@
 			name="To-Do Task Stages"
 			res_model="todo.task.stage"
 			view_mode="tree,form"/>
+		<act_window id="action_todo_stage_test"
+			name="To-Do Task Stages - Test"
+			res_model="todo.task.stage"
+			view_mode="tree.form" />
 		<act_window id="todo_app.action_todo_task"
 			name="To-Do Tasks"
 			res_model="todo.task"
