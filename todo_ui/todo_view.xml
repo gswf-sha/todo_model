@@ -118,5 +118,21 @@
 				</tree>
 			</field>
 		</record>
+		<record id="todo_app.view_filter_todo_task" model="ir.ui.view">
+			<field name="name">To-do Task Filter</field>
+			<field name="model">todo.task</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" domain_filter="['|',
+						('name','ilike',self),('user_id','ilike',self)]"/>
+					<field name="user_id" />
+					<filter name="filter_not_done" string="Not Done"
+						domain="[('is_done','=',False)]"/>
+					<separatro/>
+					<filter name="group_user" string="By User"
+						context="{'group_by':'user_id'}"/>
+				</search>
+			</field>
+		</record>
 	</data>
 </openerp>
