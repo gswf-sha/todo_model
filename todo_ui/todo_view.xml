@@ -22,7 +22,7 @@
 			name="To-Do Task Stages"
 			res_model="todo.task.stage"
 			src_model="todo.task"
-			multi="False" />
+			multi="True" />
 		<menuitem id="menu_todo_task_main"
 			name="ToDo-LSY" parent="mail.mail_my_stuff" />
 		<menuitem id="todo_app.menu_todo_task"
