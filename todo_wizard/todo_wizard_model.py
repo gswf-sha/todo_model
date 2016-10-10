@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 class TodoWizard(models.TransientModel):
 	_name = 'todo.wizard'
 	task_ids=fields.Many2many('todo.task',string='Tasks')
-	new_deadline=fields.Data('Deadline to Set')
+	new_deadline=fields.Date('Deadline to Set')
 	new_user_id = fields.Many2one(
 		'res.users',string='Responsible to Set')
 
