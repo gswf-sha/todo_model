@@ -111,6 +111,8 @@
 				<tree editable="bottom"
 					colors="gray:is_done==True"
 					fonts="italic: state!='open'" delete="false">
+					<field name="stage_state" invisible="True" />
+					<field name="is_done" inviisible="True" />
 					<field name="name"/>
 					<field name="user_id"/>
 				</tree>

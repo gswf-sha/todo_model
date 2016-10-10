@@ -69,7 +69,7 @@ class TodoTask(models.Model):
 		string = 'Stage State')
 
 	refers_to = fields.Reference(
-		referencable_models, 'Refers to')
+		referencable_models, 'Refers')
 
 	@api.one
 	@api.depends('stage_id.fold')
