@@ -53,10 +53,13 @@ class TodoWizard(models.TransientModel):
 	def do_populate_tasks(self):
 		self.ensure_one()
 		Task = self.env['todo.task']
-		logging.debug('Task:%s'%Task)
+		logging.debug('Task:')
+		logging.debug(Task)
 		all_tasks = Task.search([])
-		logging.debug('all_tasks:%s'%all_tasks)
+		logging.debug('all_tasks:')
+		logging.debug(all_tasks)
 		self.task_ids = all_tasks
-		logging.debug('self.task_ids:%s'%self.task_ids)
+		logging.debug('self.task_ids:')
+		logging.debug(self.task_ids)
 		#  reopen wizard form on same wizard record
 		return self.do_reopen_form
