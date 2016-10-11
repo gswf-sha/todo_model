@@ -15,7 +15,7 @@
 						<group><field name="new_deadline" /></group>
 					</group>
 					<footer>
-						<button type="object" name="do_mass_upgrade"
+						<button type="object" name="do_mass_update"
 							string="Mass Update" class="oe_highlight"
 							attrs="{'invisible':
 								[('new_deadline','=',False),
