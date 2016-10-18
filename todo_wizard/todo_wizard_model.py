@@ -39,7 +39,9 @@ class TodoWizard(models.TransientModel):
 
 	@api.multi
 	def do_reopen_form(self):
+		logging.warning('do_reopen_form starts')
 		self.ensure_one()
+		logging.warning('ensure_one ends')
 		return {
 			'type':'ir.actions.act_window',
 			'res_model':self._name, # this model
@@ -51,7 +53,9 @@ class TodoWizard(models.TransientModel):
 
 	@api.multi
 	def do_populate_tasks(self):
+		logging.warning('GetAll starts')
 		self.ensure_one()
+		logging.warning('ensure_one ends')
 		Task = self.env['todo.task']
 		logging.warning(Task)
 		all_tasks = Task.search([])
