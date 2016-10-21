@@ -26,7 +26,7 @@ class TodoWizard(models.TransientModel):
 		_logger.debug('Mass update on Todo Tasks %s',
 			self.task_ids.ids)
 		if self.new_deadline:
-			self.task_ids.write({'date_deadline':self.new_user_id})
+			self.task_ids.write({'date_deadline':self.new_deadline})
 		if self.new_user_id:
 			self.task_ids.write({'user_id':self.new_user_id.id})
 
@@ -53,9 +53,9 @@ class TodoWizard(models.TransientModel):
 
 	@api.multi
 	def do_populate_tasks(self):
-		logging.warning('GetAll starts')
+
 		self.ensure_one()
-		logging.warning('ensure_one ends')
+
 		Task = self.env['todo.task']
 		logging.warning(Task)
 		all_tasks = Task.search([])
@@ -64,4 +64,4 @@ class TodoWizard(models.TransientModel):
 		logging.warning('task_ids')
 		logging.warning(self.task_ids)
 		#  reopen wizard form on same wizard record
-		return self.do_reopen_form
+		return self.do_reopen_form()
