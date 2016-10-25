@@ -85,8 +85,8 @@ class TodoTask(models.Model):
 	@api.one
 	@api.constrains('name')
 	def _check_name_size(self):
-		if len(self.name) < 5:
-			raise ValidationError('Must have 5 chars!')
+		if len(self.name) < 1:
+			raise ValidationError('Must have 1 chars!')
 
 	@api.one
 	def compute_user_todo_count(self):
