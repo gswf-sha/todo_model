@@ -9,3 +9,4 @@ class InfoHelp(models.Model):
 	_name = 'info.help'
 	base_intro = fields.Html('Introduction')
 	func_easy = fields.Html('Basic functions')
+	active = fields.Boolean('Active', default = True)
