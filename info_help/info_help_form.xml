@@ -1,0 +1,33 @@
+<?xml version= "1.0"?>
+<openerp>
+	<data>
+		<!-- add form view -->
+		<record id="view_form_info_help" model="ir.ui.view">
+			<field name="name">Info Help Form</field>
+			<field name="model">info.help</field>
+			<field name="arch" type="xml">
+				<form string="Info Help">
+					<sheet>
+						<group>
+							<field name="base_intro"/>
+							<field name="func_easy" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- add action -->
+		<act_window id="action_info_help"
+			name="Info Help"
+			res_model="info.help"
+			view_mode = "form"
+			/>
+		<!-- add menuitem -->
+		<menuitem id="menu_info_help"
+			name="Info Help"
+			parent="mail.mail_feeds_main"
+			sequence = "5"
+			action = "action_info_help"
+			/>
+	</data>
+</openerp>
