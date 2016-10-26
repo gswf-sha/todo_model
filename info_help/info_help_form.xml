@@ -20,7 +20,9 @@
 		<act_window id="action_info_help"
 			name="Info Help"
 			res_model="info.help"
-			view_mode = "form"
+			view_mode = "list,form"
+			target="current"
+			domain="[('id','=','1')]"
 			/>
 		<!-- add menuitem -->
 		<menuitem id="menu_info_help_main"
