@@ -6,6 +6,8 @@ class TodoTask(models.Model):
 	name = fields.Char('Description', required = True)
 	is_done = fields.Boolean('Done?')
 	active = fields.Boolean('Active', default = True)
+	doc = fields.Char('link')
+	desc = fields.Html('Detail Doc')
 
 	@api.one 
 	def do_toggle_done(self):
