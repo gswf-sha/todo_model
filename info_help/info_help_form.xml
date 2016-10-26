@@ -23,10 +23,14 @@
 			view_mode = "form"
 			/>
 		<!-- add menuitem -->
-		<menuitem id="menu_info_help"
+		<menuitem id="menu_info_help_main"
 			name="Info Help"
-			parent="mail.mail_feeds_main"
 			sequence = "5"
+			parent= "mail.mail_feeds_main"/>
+		<menuitem id="menu_info_help_video"
+			name="Help Videos"
+			parent="menu_info_help_main"
+			sequence = "10"
 			action = "action_info_help"
 			/>
 	</data>
