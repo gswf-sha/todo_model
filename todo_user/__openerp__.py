@@ -1,8 +1,8 @@
 {
 	"name":"Multiuser To-do",
-	"description":"Extend the To-Do app to Multiuser",
+	"description":"2nd lesson: Extend the To-Do app to Multiuser",
 	"author":"Feng YE",
-	"depends":['mail'],
+	"depends":['todo_app'],
 	# "application":True,
 	"demo":['todo.task.csv'],
 	"data":[
