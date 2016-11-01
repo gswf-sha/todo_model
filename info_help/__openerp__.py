@@ -2,7 +2,8 @@
 	"name":"help for info",
 	"descrption":"1st Practice: Add help to Message menu",
 	"author":"Feng YE",
-	"depends":['mail'],
+	"depends":['mail',
+		'crm'],
 	"application":True,
 	"data":[
 		'info_help_form.xml',

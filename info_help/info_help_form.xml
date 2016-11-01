@@ -16,6 +16,47 @@
 				</form>
 			</field>
 		</record>
+		<!-- simplified CRM_lead form view -->
+		<record id="simplified_crm_lead_form" model="ir.ui.view">
+			<field name="name">Simplified lead form</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+			<field name="arch" type="xml">
+				<!-- hide unnecessary fields -->
+				<field name="partner_id" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+				<field name="function" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+				<field name="fax" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+				<field name="email_from" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+				<field name="user_id" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+				<field name="priority" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+				<field name="categ_ids" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+				<xpath expr="//page[@string='Extra Info']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<field name="priority" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+				<!-- adjust field position -->
+				
+				<field name="user_id" position="after">
+					<field name="SourceUrl" widget="url" />
+				</field>
+			</field>
+		</record>
 		<!-- add action -->
 		<act_window id="action_info_help"
 			name="Info Help"
@@ -35,5 +76,28 @@
 			sequence = "10"
 			action = "action_info_help"
 			/>
+
+		<!-- to hide Menu Items -->
+		<record id="make_invisible" model="res.groups">
+			<field name="name">Invisible</field>
+		</record>
+		<record model="ir.ui.menu" id="mail.mail_tomefeeds">
+			<field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+		</record>
+		<record model="ir.ui.menu" id="mail.mail_feeds">
+			<field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+		</record>
+		<record model="ir.ui.menu" id="mail.mail_my_stuff">
+			<field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+		</record>
+		<record model="ir.ui.menu" id="mail.mail_group_root">
+			<field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+		</record>
+		<record model="ir.ui.menu" id="base.menu_partner_form">
+			<field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+		</record>
+		<record model="ir.ui.menu" id="base.menu_reporting">
+			<field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+		</record>
 	</data>
 </openerp>
